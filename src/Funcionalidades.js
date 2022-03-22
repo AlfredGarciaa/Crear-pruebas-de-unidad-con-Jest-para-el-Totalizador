@@ -6,7 +6,7 @@ const form = document.querySelector("#totalizador-form");
 form.addEventListener("submit", (event)=>{
     event.preventDefault();
     let res= precioTotal(cantidad.value,precio.value);
-    let valorimpuesto = ImpFORstate(res,estado.value);
+    let valorimpuesto = CalcularImpuesto(res,estado.value);
     let valordescuento=DescuentoCalcular(res+valorimpuesto);
     let porcetanjedescuento=DescuentoMostrar(res+valorimpuesto);
     
@@ -26,7 +26,8 @@ function precioTotal(cantidad,precio)
     return res;
 }
 
-function ImpFORstate(valorcompra, valueState) {
+/*
+function CalcularImpuesto(valorcompra, valueState) {
     let valorImpuestos=0;
     let res;
     switch (valueState) {
@@ -103,3 +104,4 @@ function DescuentoMostrar(valorcompra){
     }
     return valorDescuento*100;
 }
+*/
