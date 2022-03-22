@@ -7,7 +7,7 @@ form.addEventListener("submit", (event)=>{
     event.preventDefault();
     let res= precioTotal(cantidad.value,precio.value);
     let valorimpuesto = CalcularImpuesto(res,estado.value);
-    let valordescuento=DescuentoCalcular(res+valorimpuesto);
+    let valordescuento=CalcularDescuento(res+valorimpuesto);
     let porcetanjedescuento=DescuentoMostrar(res+valorimpuesto);
     
     document.getElementById('precio').innerHTML=res
@@ -53,7 +53,7 @@ function CalcularImpuesto(valorcompra, valueState) {
     return res;
 }
 
-function DescuentoCalcular(valorcompra){
+function CalcularDescuento(valorcompra){
     let valorDescuento=0;
     let res;
     if(valorcompra>30000){

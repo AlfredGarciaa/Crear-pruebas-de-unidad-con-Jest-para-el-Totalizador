@@ -24,4 +24,3 @@ function CalcularImpuesto(valorcompra, valueState) {
     return res;
 }
 export default CalcularImpuesto;
-  
